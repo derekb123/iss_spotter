@@ -87,7 +87,7 @@ const nextISSTimesForMyLocation = function(callback) {
         if (error) {
         return callback (error, null);
         }
-        callback(passArr);
+        callback(null, passArr);
       });
     });
   });
@@ -95,4 +95,4 @@ const nextISSTimesForMyLocation = function(callback) {
 
 
 
-module.exports = { fetchMyIP, fetchCoordsByIP, fetchISSFlyOverTimes, nextISSTimesForMyLocation };
+module.exports = { nextISSTimesForMyLocation };
